@@ -1,0 +1,40 @@
+{
+  "name": "threejs-geometry-format-custom-binary",
+  "version": "1.0.0",
+  "description": "A custom geometry format involving binary buffers and gzipping.",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Tomasz Dysinski",
+    "email": "oz@bunnybones.com",
+    "url": "https://github.com/bunnybones1"
+  },
+  "dependencies": {
+    "browserify-zlib": "^0.1.4",
+    "enum-buffer-array-types": "^1.1.0",
+    "jbinary": "^2.1.2",
+    "jszlib": "git://github.com/dasmoth/jszlib",
+    "text-encoding": "^0.5.2"
+  },
+  "devDependencies": {
+    "loadandrunscripts": "^1.0.0",
+    "threejs-managed-view": "^4.0.1",
+    "xhr": "^2.0.1"
+  },
+  "scripts": {
+    "test": "beefy test.js --live --open"
+  },
+  "keywords": [
+    "threejs",
+    "format",
+    "geometry"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bunnybones1/threejs-geometry-format-custom-binary.git"
+  },
+  "homepage": "https://github.com/bunnybones1/threejs-geometry-format-custom-binary",
+  "bugs": {
+    "url": "https://github.com/bunnybones1/threejs-geometry-format-custom-binary/issues"
+  }
+}
