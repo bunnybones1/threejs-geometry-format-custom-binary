@@ -1,4 +1,4 @@
-var TextEncoder = require('text-encoding');
+var TextDecoder = require('text-encoding').TextDecoder;
 	zlib = require('jszlib'),
 	bufferArrayTypes = require('enum-buffer-array-types');
 
