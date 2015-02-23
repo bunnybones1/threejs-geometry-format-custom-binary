@@ -43,20 +43,20 @@ function decodeToGeometry(buffer, inflate) {
 
 		var nameBuffer = new Uint8Array(sliceBuffer());
 		var name = utf8Decoder.decode(nameBuffer);
-		console.group(name);
+		if(debugLevel >= 2) console.group(name);
 
 		advanceCursor(4);
 
 		var payloadTypeBuffer = new Uint32Array(sliceBuffer());
 		var payloadType = payloadTypeBuffer[0];
 		var ArrayConstructor = bufferArrayTypes.getConstructor(payloadType);
-		console.log(enumName(payloadType));
+		if(debugLevel >= 2) console.log(enumName(payloadType));
 
 		advanceCursor(4);
 
 		var payloadLengthBuffer = new Uint32Array(sliceBuffer());
 		var payloadLength = payloadLengthBuffer[0];
-		console.log('bytes', payloadLength);
+		if(debugLevel >= 2) console.log('bytes', payloadLength);
 
 		advanceCursor(payloadLength);
 
@@ -64,7 +64,7 @@ function decodeToGeometry(buffer, inflate) {
 		var payloadBuffer = new ArrayConstructor(sliceBuffer());
 
 		buffers[name] = payloadBuffer;
-		console.groupEnd();
+		if(debugLevel >= 2) console.groupEnd();
 	}
 	// interfaceUint32.read
 	
@@ -77,6 +77,11 @@ function decodeToGeometry(buffer, inflate) {
 	});
 	// var geometry = new THREE.SphereGeometry(1, 32, 16);
 	return geometry;
+}
+var debugLevel = 0;
+
+decodeToGeometry.setDebugLevel = function(level) {
+	debugLevel = level;
 }
 
 module.exports = decodeToGeometry;
