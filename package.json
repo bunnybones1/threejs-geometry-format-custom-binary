@@ -10,9 +10,7 @@
     "url": "https://github.com/bunnybones1"
   },
   "dependencies": {
-    "browserify-zlib": "^0.1.4",
-    "enum-buffer-array-types": "^1.1.0",
-    "jbinary": "^2.1.2",
+    "enum-buffer-array-types": "^2.0.1",
     "jszlib": "git://github.com/dasmoth/jszlib",
     "text-encoding": "^0.5.2"
   },
