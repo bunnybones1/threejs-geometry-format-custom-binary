@@ -1,6 +1,6 @@
 {
   "name": "threejs-geometry-format-custom-binary",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A custom geometry format involving binary buffers and gzipping.",
   "main": "index.js",
   "license": "MIT",
