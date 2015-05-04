@@ -1,8 +1,5 @@
-var TextDecoder = require('text-encoding').TextDecoder;
-	zlib = require('jszlib'),
+var zlib = require('jszlib'),
 	bufferArrayTypes = require('enum-buffer-array-types');
-
-var utf8Decoder = new TextDecoder('utf-8');
 
 function enumName(val) {
 	var typeName = 'unknown';
@@ -42,7 +39,7 @@ function decodeToGeometry(buffer, inflate) {
 		advanceCursor(nameLength);
 
 		var nameBuffer = new Uint8Array(sliceBuffer());
-		var name = utf8Decoder.decode(nameBuffer);
+		var name = new Buffer(nameBuffer, 'utf8').toString();
 		if(debugLevel >= 2) console.group(name);
 
 		advanceCursor(4);

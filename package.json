@@ -11,8 +11,7 @@
   },
   "dependencies": {
     "enum-buffer-array-types": "^2.0.1",
-    "jszlib": "git://github.com/dasmoth/jszlib",
-    "text-encoding": "^0.5.2"
+    "jszlib": "git://github.com/dasmoth/jszlib"
   },
   "devDependencies": {
     "loadandrunscripts": "^1.0.0",
